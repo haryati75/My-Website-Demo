@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+	color: black;
+	background: #FFEDED;
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+	color: lightpink;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	font-weight: 900;
+	font-size: 30px;
+}
+
+p {
+	color: rgb(71, 13, 33);
+	line-height: 1.5;
+}
+
+/* LVHA order */
+a {
+	text-decoration: none;
+	color : darkgray;
+}
+
+nav > a {
+	display: inline-block;
+	margin-right: 30px;	
+}
+
+nav > a:link {	
+	color: lightpink;
+}
+
+nav > a:link:last-child {
+	margin-right: 0px;
+}
+
+nav a:visited {
+	color: lightpink;
+}
+
+nav a:hover, a:active {
+	color: orange;
+	font-weight: 700;
+}
+
+
