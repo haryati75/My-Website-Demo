@@ -1,54 +1,98 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
 
 * {
+  /* margin: 0;
+	padding: 0; */
   box-sizing: border-box;
 }
 
 body {
-	color: black;
-	background: #FFEDED;
-	font-family: 'Montserrat', sans-serif;
+  color: black;
+  background: #ffeded;
+  font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
-	color: lightpink;
-	letter-spacing: 3px;
-	text-transform: uppercase;
-	font-weight: 900;
-	font-size: 30px;
+  color: lightpink;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+h2 {
+  padding-top: 20px;
+  margin-bottom: 0px;
 }
 
 p {
-	color: rgb(71, 13, 33);
-	line-height: 1.5;
+  color: rgb(71, 13, 33);
+  line-height: 1.5;
+}
+
+nav {
+  margin: 15px auto;
 }
 
 /* LVHA order */
-a {
-	text-decoration: none;
-	color : darkgray;
+a:link,
+a:visited {
+  text-decoration: none;
+  color: darkred;
 }
 
-nav > a {
-	display: inline-block;
-	margin-right: 30px;	
+a:hover,
+a:active {
+  font-weight: bolder;
 }
 
-nav > a:link {	
-	color: lightpink;
+nav a:link {
+  color: lightpink;
+  display: inline-block;
+  margin-right: 30px;
+  font-size: large;
 }
 
-nav > a:link:last-child {
-	margin-right: 0px;
+nav a:link:last-child {
+  margin-right: 0px;
 }
 
 nav a:visited {
-	color: lightpink;
+  color: lightpink;
 }
 
-nav a:hover, a:active {
-	color: orange;
-	font-weight: 700;
+nav a:hover,
+nav a:active {
+  color: aliceblue;
 }
 
+img {
+  max-width: fit-content;
+  max-height: 60vh;
+}
 
+.my-button {
+  padding: 10px 15px;
+  border: 3px solid lightpink;
+  background-color: lightpink;
+  border-radius: 10px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+article {
+  padding-bottom: 20px;
+  border-bottom: 1px dashed gray;
+}
+
+aside {
+  margin: 20px 10px;
+  padding: 0px 15px;
+  border: 3px dashed gray;
+}
+
+#categories {
+  margin-top: 40px;
+}
