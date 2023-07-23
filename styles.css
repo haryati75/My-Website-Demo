@@ -167,7 +167,8 @@ footer > div > p {
   transition: all 0.3s ease-out;
 }
 
-.box-shadow:hover {
+.box-shadow:hover,
+.box-shadow:focus {
   box-shadow: 0 20px 30px var(--main-shadow-color);
   transform: translateY(-15px);
 }
