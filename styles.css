@@ -1,40 +1,65 @@
+/* Google Font - import Font */
+/* Use fonts with fallback to body and headings */
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;0,800;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
 
+/* CSS Variables */
+:root {
+  --main-text-color: rgb(71, 13, 33);
+  --main-background-color: #ffeded;
+  --main-outline-color: lightslategray;
+  --main-shadow-color: rgba(72, 78, 85, 0.4);
+}
+
 * {
-  /* margin: 0;
-	padding: 0; */
   box-sizing: border-box;
 }
 
 body {
-  color: black;
-  background: #ffeded;
+  color: var(--main-text-color);
+  background: var(--main-background-color);
+  font-family: 'Karla', 'Montserrat', sans-serif;
+}
+
+/* Combining selectors */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.nav-link {
   font-family: 'Montserrat', sans-serif;
 }
 
+/* Change Headings Fonts */
 h1 {
-  color: lightpink;
+  color: deeppink;
   letter-spacing: 3px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-weight: bolder;
   font-size: 30px;
 }
 
-h2 {
-  padding-top: 20px;
-  margin-bottom: 0px;
+h2,
+h3 {
+  margin-bottom: none;
 }
 
 p {
-  color: rgb(71, 13, 33);
   line-height: 1.5;
+  font-style: normal;
 }
 
-nav {
-  margin: 15px auto;
+header {
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 10px;
 }
 
-/* LVHA order */
+/* LVHA order for anchor tags */
+/* Change hover color for About, Posts, Categories tags */
 a:link,
 a:visited {
   text-decoration: none;
@@ -46,53 +71,103 @@ a:active {
   font-weight: bolder;
 }
 
-nav a:link {
-  color: lightpink;
-  display: inline-block;
-  margin-right: 30px;
-  font-size: large;
+/* Nav anchor tags */
+nav a:link,
+a:visited {
+  color: hotpink;
+  font-size: larger;
 }
 
-nav a:link:last-child {
-  margin-right: 0px;
-}
-
-nav a:visited {
-  color: lightpink;
-}
-
-nav a:hover,
-nav a:active {
-  color: aliceblue;
+/* Change Colour due to Bootstrap CSS precedence */
+nav .nav-link:hover,
+nav .nav-link:focus,
+nav .nav-link:active {
+  color: var(--main-background-color);
 }
 
 img {
   max-width: fit-content;
-  max-height: 60vh;
-}
-
-.my-button {
-  padding: 10px 15px;
-  border: 3px solid lightpink;
-  background-color: lightpink;
-  border-radius: 10px;
+  max-height: 40vh;
 }
 
 section {
-  margin-bottom: 30px;
+  padding: 10px;
+}
+
+.avatar {
+  font-size: larger;
 }
 
 article {
-  padding-bottom: 20px;
-  border-bottom: 1px dashed gray;
+  margin-bottom: 20px;
+  border-bottom: 1px dashed var(--main-outline-color);
 }
 
-aside {
-  margin: 20px 10px;
-  padding: 0px 15px;
-  border: 3px dashed gray;
+article:last-child {
+  border-bottom: none;
 }
 
+/* first paragraph in a post */
+article p:nth-of-type(1) {
+  padding-top: 25px;
+}
+
+/* Nesting CSS selectors */
+.blockquote {
+  font-size: smaller;
+
+  .blockquote-text {
+    font-style: oblique;
+  }
+
+  .blockquote-footer {
+    text-align: end;
+  }
+}
+
+/* Selector for element Id */
 #categories {
-  margin-top: 40px;
+  margin: 20px 10px;
+  padding: 10px 15px;
+  border: 3px dashed var(--main-outline-color);
+}
+
+/* Custom class : .category-item to simplify apply same styling to similar elements */
+/* specify custom class in index.html to style category list items */
+#categories > ul > li {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.my-button {
+  border: 3px solid lightpink;
+  background-color: lightpink;
+}
+
+/* All child/grandchildren elements */
+footer p {
+  margin: 0;
+  font-size: small;
+  line-height: 1.2rem;
+  color: palevioletred;
+}
+
+/* Direct child element only */
+footer > div > p {
+  color: lightslategray;
+}
+
+#copyright-text {
+  font-size: x-small;
+}
+
+/* CSS Animation - suitable for "box" elements */
+.box-shadow {
+  box-shadow: 0 1px 1px var(--main-shadow-color);
+  transition: all 0.3s ease-out;
+}
+
+.box-shadow:hover {
+  box-shadow: 0 20px 30px var(--main-shadow-color);
+  transform: translateY(-15px);
 }

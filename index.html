@@ -1,100 +1,137 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="h-100">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="An Awesome Website by Haryati" />
-    <meta
-      name="keywords"
-      content="web development, website design, html semantics"
-    />
-    <title>My Website</title>
-    <style type="text/css">
-      #main-heading {
-        text-align: center;
-        background-color: black;
-        color: white;
-        padding: 10px;
-      }
 
+    <!-- Change Tab Title -->
+    <title>My Website</title>
+
+    <!-- Order of CSS styles matters - bottom-most has higher precedence -->
+
+    <!-- External CSS libraries -->
+    <!-- CSS Bootstrap  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- Add External CSS: styles.css -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Try moving Internal CSS into styles.css -->
+    <style>
       #main-footer {
-        margin-top: 50px;
         border-bottom: orange solid 3px;
         text-align: center;
-        font-size: 16px;
-        color: darkslategray;
+        background-color: moccasin;
       }
     </style>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
-  <body>
-    <header id="main-heading">
-      <h1>Haryati's Awesome Website</h1>
-      <img src="./images/birds.jpg" width="80%" />
-      <nav>
-        <a href="about.html">About</a>
-        <a href="#posts">Posts</a>
-        <a href="#categories">Categories</a>
+
+  <!-- Enable Sticky Footer from Bootstrap 5 -->
+  <body class="d-flex flex-column h-100">
+    <header>
+      <h1>My Website</h1>
+
+      <!-- Relative path for images folder -->
+      <img src="./images/birds.jpg" class="w-75" />
+
+      <!-- Navigation section -->
+      <nav class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#posts">Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#categories">Categories</a>
+        </li>        
       </nav>
     </header>
 
-    <section id="posts">
-      <article>
-        <h2>Blog Post 1</h2>
-        <small>Posted by Haryati H</small>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <a href="post.html">Read More ...</a>
+    <section id="posts" class="container">
+      <!-- Add CSS animation to card -->
+      <article class="card">
+        <header class="card-header">
+          <h2 class="card-title">Blog Post 1</h2>
+          <small class="card-subtitle text-muted">Posted by Haryati <span class="avatar">&#129409;</span></small>
+        </header>
+
+        <div class="card-body">
+          <p class="card-text">Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Voluptate quis eligendi odio eius praesentium officia veniam dignissimos, modi autem. Obcaecati libero laborum recusandae similique culpa pariatur iste aperiam tenetur eligendi!</p>
+
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, assumenda quas reiciendis odio dignissimos pariatur corrupti labore. Perferendis, harum sequi quas deleniti quis voluptatem perspiciatis incidunt eaque odit. Nulla, laboriosam.</p>
+
+          <div class="card-body m-2">
+            <blockquote class="blockquote">
+              <p class="blockquote-text">
+                Any fool can write code that a computer can understand. Good programmers write code that humans can understand. 
+              </p>
+              <footer class="blockquote-footer">
+                Martin Fowler
+              </footer>
+              
+            </blockquote>          
+          </div>          
+        </div>
       </article>
-      <article>
+
+      <article class="card">
         <h2>Blog Post 2</h2>
-        <small>Posted by Haryati H</small>
+        <small>Posted by Felix &#128008; on 1 April 2023</small>
+        <!-- Use of code snippet for lorem -->
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          
         </p>
-        <a href="post.html">Read More ...</a>
       </article>
+
+      <article class="card">
+        <div class="card-body">
+          <h2 class="card-title">Sticky Footer Demo</h2>
+          <p class="card-text">Sticky footer ensures that footer is fixed at the bottom of the page when content is insufficient to fill entire page. </p>
+          <div>
+            <a href="sticky_footer.html" class="text-muted">Read more ...</a>
+          </div>
+        </div>
+      </article>
+
       <article>
-        <h2>Blog Post 3</h2>
-        <small>Posted by Haryati H</small>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <a href="post.html">Read More ...</a>
+        <h2>Blog Post 4</h2>
+        <small>Posted by Georgia</small>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque, soluta iste unde aperiam ullam quisquam, dolores ex expedita qui velit. Tenetur, magnam sapiente voluptatibus, minima deleniti iste ratione ipsum officia.</p>
+        <p>Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam natus officiis aliquid ipsa odio doloribus dolore. Id corporis blanditiis, provident ut tenetur eum aliquid quod nesciunt, officiis accusantium porro nostrum!</p>
+        <p>Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Atque cum quidem deleniti commodi sapiente vel fuga, odio distinctio quod delectus facere impedit nisi expedita quo aspernatur unde, repudiandae? Explicabo, in.</p>
+
+        <!-- Add link to post.html in Read more -->
+        <a href="">Read more ...</a>
       </article>
     </section>
-    <br />
-    <a class="my-button" href="#main-heading">Go to Top</a>
 
     <aside id="categories">
       <h3>Categories</h3>
+      <!-- Use Emmet: ul>li*3{categories $} -->
+      <!-- Change Emmet above to include .category-item -->
       <ul>
-        <li>Category A</li>
-        <li>Category B</li>
-        <li>Category C</li>
+        <li>categories 1</li>
+        <li>categories 2</li>
+        <li>categories 3</li>
       </ul>
     </aside>
-    <footer id="main-footer">
-      <p>Copyright &copy; 2022, My Website</p>
+
+    <nav class="nav justify-content-center mb-2">
+      <button type="button" class="btn my-button">
+        <a href="#">Go to Top</a>
+      </button>
+    </nav>
+
+    <footer id="main-footer" class="footer mt-auto py-2">
+      <div class="container">
+        <!-- Add copyright symbol using Entity Code &; -->
+        <p id="copyright-text">Copyright &copy; 2023</p>
+        <div>
+          <p>HTML/CSS Workshop by Haryati H</p>
+        </div>
+      </div>
     </footer>
+
   </body>
 </html>
