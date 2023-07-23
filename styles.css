@@ -1,7 +1,7 @@
 /* Google Font - import Font */
 /* Use fonts with fallback to body and headings */
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;0,800;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;0,800;1,400&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap'); */
 
 /* CSS Variables */
 :root {
@@ -18,7 +18,7 @@
 body {
   color: var(--main-text-color);
   background: var(--main-background-color);
-  font-family: 'Karla', 'Montserrat', sans-serif;
+  font-family: sans-serif;
 }
 
 /* Combining selectors */
@@ -29,7 +29,7 @@ h4,
 h5,
 h6,
 .nav-link {
-  font-family: 'Montserrat', sans-serif;
+  font-family: Verdana, sans-serif;
 }
 
 /* Change Headings Fonts */
