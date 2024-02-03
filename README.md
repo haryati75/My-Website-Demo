@@ -4,6 +4,8 @@ HTML-CSS Workshop @ Trent Global College
 by Haryati Hassan
 Last update: Feb 2024
 
+Website URL: https://my-website-hh.netlify.app/
+
 ## Summary
 Learn about:
 * HTML Basics
@@ -24,4 +26,5 @@ Learn about:
   * CSS Bootstrap
   * Animation
   * Fixed footer
+  * Javascript addEventListener, querySelector
 
