@@ -37,25 +37,25 @@
       <h1>Haryati's HTML/CSS Demo</h1>
 
       <!-- Relative path for images folder -->
-      <img src="./images/birds.jpg" class="w-75" />
+      <img src="./public/birds.JPG" class="w-75" />
 
       <!-- Navigation section -->
       <nav class="nav justify-content-center">
         <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="./fixed_footer.html">About</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#posts">Posts</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#categories">Categories</a>
+          <a class="nav-link" href="#categories">Filter</a>
         </li>
       </nav>
     </header>
 
     <section id="posts" class="container">
-      <!-- Add CSS animation to card -->
-      <article class="card box-shadow">
+      <!-- Add CSS animation to card with class "box-shadow" -->
+      <article data-category="post 1" class="card box-shadow">
         <header class="card-header">
           <h2 class="card-title">CSS with Bootstrap 5</h2>
           <small class="card-subtitle text-muted"
@@ -90,67 +90,57 @@
         </div>
       </article>
 
-      <article class="card">
-        <h2>Blog Post 2</h2>
-        <small>Posted by Felix &#128008; on 1 April 2023</small>
+      <article data-category="post 2" class="card">
+        <!-- Wrap header and content of article in a card-header and card-body -->
+        <h2>Code along here</h2>
+        <small>Posted by Felix &#128008; on 6 Feb 2024</small>
         <!-- Use of code snippet for lorem -->
-        <p></p>
+        <p>Fill in with lorem</p>
       </article>
 
-      <article class="card">
+      <article data-category="post 3" class="card box-shadow">
+        <header class="card-header">
+          <h2 class="card-title">Blog Post 3</h2>
+          <small>Posted by Georgia</small>          
+        </header>
         <div class="card-body">
-          <h2 class="card-title">Sticky Footer Demo</h2>
           <p class="card-text">
-            Sticky footer ensures that footer is fixed at the bottom of the page
-            when content is insufficient to fill entire page.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque,
+            soluta iste unde aperiam ullam quisquam, dolores ex expedita qui
+            velit. Tenetur, magnam sapiente voluptatibus, minima deleniti iste
+            ratione ipsum officia.
           </p>
-          <div>
-            <a href="sticky_footer.html" class="text-muted">Read more ...</a>
-          </div>
+          <p class="card-text">
+            Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam
+            natus officiis aliquid ipsa odio doloribus dolore. Id corporis
+            blanditiis, provident ut tenetur eum aliquid quod nesciunt, officiis
+            accusantium porro nostrum!
+          </p>
+
+          <!-- Add link to post.html in Read more -->
+          <a href="post.html">Read more ...</a>          
         </div>
-      </article>
-
-      <article>
-        <h2>Blog Post 4</h2>
-        <small>Posted by Georgia</small>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque,
-          soluta iste unde aperiam ullam quisquam, dolores ex expedita qui
-          velit. Tenetur, magnam sapiente voluptatibus, minima deleniti iste
-          ratione ipsum officia.
-        </p>
-        <p>
-          Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam
-          natus officiis aliquid ipsa odio doloribus dolore. Id corporis
-          blanditiis, provident ut tenetur eum aliquid quod nesciunt, officiis
-          accusantium porro nostrum!
-        </p>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Atque cum
-          quidem deleniti commodi sapiente vel fuga, odio distinctio quod
-          delectus facere impedit nisi expedita quo aspernatur unde,
-          repudiandae? Explicabo, in.
-        </p>
-
-        <!-- Add link to post.html in Read more -->
-        <a href="post.html">Read more ...</a>
       </article>
     </section>
 
-    <aside id="categories">
-      <h3>Categories</h3>
-      <!-- Use Emmet: ul>li*3{categories $} -->
-      <!-- Change Emmet above to include .category-item -->
+    <aside id="categories" class="container">
+      <h3>Filter posts</h3>
+      <!-- Use Emmet -->
+      <!-- In Sublime Text, you will need to install Package Control and then install plugin Emmet -->
+      <!-- https://packagecontrol.io/installation -->
       <ul>
-        <li>categories 1</li>
-        <li>categories 2</li>
-        <li>categories 3</li>
+        <!-- li.category-item{post $}*3  Emmet -->
+        <li class="category-item">post 1</li>
+        <li class="category-item">post 2</li>
+        <li class="category-item">post 3</li>
+
+        <li class="selected-category-item">show all</li>
       </ul>
     </aside>
 
     <nav class="nav justify-content-center mb-2">
       <button type="button" class="btn my-button">
-        <a href="#">Go to Top</a>
+        <a href="">Go to Top</a>
       </button>
     </nav>
 
@@ -163,5 +153,8 @@
         </div>
       </div>
     </footer>
+
+    <!-- This adds the JavaScript file -->
+    <script src="app.js"></script>
   </body>
 </html>

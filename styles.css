@@ -127,16 +127,25 @@ article p:nth-of-type(1) {
 
 /* Selector for element Id */
 #categories {
-  margin: 20px 10px;
+  margin: 20px auto;
   padding: 10px 15px;
   border: 3px dashed var(--main-outline-color);
 }
 
 /* Custom class : .category-item to simplify apply same styling to similar elements */
 /* specify custom class in index.html to style category list items */
-#categories > ul > li {
+.category-item {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
+  line-height: 150%;
+}
+
+.selected-category-item {
+  padding: 5px 10px;
+  margin: 5px;
+  border: 1px dashed var(--main-outline-color);
+  border-radius: 5px;
+  color: var(--main-text-color)
 }
 
 .my-button {
